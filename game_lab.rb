@@ -16,5 +16,11 @@ end
     return chosen_player
   end
 
+  def take_a_turn
+    dice_roll = @dice.throw_dice
+    current_player = select_player
+    new_position = current_player.my_position(dice_roll)
+    return new_position
+  end
 
 end
